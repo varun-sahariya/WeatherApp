@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <h5>Weather App</h5>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <form action="#">
+        <input type="text" id="search-input" placeholder="Enter city..." />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Weather Data -->
+    <div class="weather-info">
+      <h3 id="city"></h3>
+      <h6 id="date"></h6>
+      <div class="temperature">
+        <span id="temperature-degree"></span> °C
+      </div>
+      <div class="description">
+        <img src="" alt="" id="description-img" />
+        <div id="description-text"></div>
+      </div>
+      <div class="details">
+        <div class="grp" id="humidity">
+          <span><i class="fa-solid fa-temperature-empty"></i> Humidity</span>
+          <h3 id="humidity-degree"></h3>
+        </div>
+        <div class="grp" id="feelslike">
+          <span><i class="fa-solid fa-droplet"></i> Feels Like</span>
+          <h3 id="feelslike-degree"></h3>
+        </div>
+        <!-- New Details -->
+        <div class="grp" id="wind-speed">
+          <span><i class="fa-solid fa-wind"></i> Wind Speed</span>
+          <h3 id="wind-speed-degree"></h3>
+        </div>
+        <div class="grp" id="pressure">
+          <span><i class="fa-solid fa-gauge"></i> Pressure</span>
+          <h3 id="pressure-degree"></h3>
+        </div>
+        <div class="grp" id="sunrise">
+          <span><i class="fa-solid fa-sun"></i> Sunrise</span>
+          <h3 id="sunrise-degree"></h3>
+        </div>
+        <div class="grp" id="sunset">
+          <span><i class="fa-solid fa-sunset"></i> Sunset</span>
+          <h3 id="sunset-degree"></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location Button -->
+    <button onclick="getLocationData()" id="loc-btn">
+      <i class="fa-solid fa-location-dot"></i> Use Current Location
+    </button>
+
+    <!-- Forecast -->
+    <div id="forecast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: url('images/bg.png') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    width: 100%;
+}
+
+h5 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.weather-info {
+    display: none;
+}
+
+.temperature {
+    font-size: 4rem;
+    color: aqua;
+    margin-top: 20px;
+}
+
+.description img {
+    width: 50px;
+}
+
+.details {
+    display: grid; /* Change to grid for flexible layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Create a responsive grid */
+    gap: 20px; /* Add space between the items */
+    margin-top: 20px;
+    justify-items: center; /* Center the items */
+}
+
+.grp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#loc-btn {
+    background: #17c473;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#forecast {
+    margin-top: 20px;
+}
+
+.forecast-day {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.forecast-day h5 {
+    font-size: 1rem;
+}
+
+.forecast-day img {
+    width: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h5 {
+        font-size: 2rem;
+    }
+
+    #search-input {
+        width: 80%;
+    }
+
+    .temperature {
+        font-size: 6rem;
+    }
+
+    .details {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid on smaller screens */
+    }
+
+    #loc-btn {
+        font-size: 1rem;
+    }
+
+    .forecast-day {
+        width: 100%;
+    }
+}
